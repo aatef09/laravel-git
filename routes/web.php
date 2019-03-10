@@ -440,4 +440,12 @@ Route::get('/');
 //});
 
 //یک تغییر ایجاد شد
+Route::prefix('fa')->group(function (){
+    App::setLocale('fa');
+    Route::get('message',function (){
+
+        return view('message');
+    });
+});
+
 
